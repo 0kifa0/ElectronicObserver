@@ -1330,11 +1330,10 @@ namespace ElectronicObserver.Utility.Data
 		}
 
 
-
-		/// <summary>
-		/// 加重対空値を求めます。
-		/// </summary>
-		public static double GetAdjustedAAValue(ShipData ship)
+        /// <summary>
+        /// 加重対空値を求めます。
+        /// </summary>
+        public static double GetAdjustedAAValue(ShipData ship)
 		{
 			int equippedModifier = ship.SlotInstance.Any(s => s != null) ? 2 : 1;
 
@@ -1504,7 +1503,7 @@ namespace ElectronicObserver.Utility.Data
 		/// <param name="combinedFleetFlag">連合艦隊フラグ。 -1=連合艦隊でない, 1=連合艦隊主力艦隊, 2=連合艦隊随伴艦隊</param>
 		public static int GetFixedAirDefense(double adjustedAAValue, double adjustedFleetAAValue, int cutinKind, int combinedFleetFlag = -1)
 		{
-			double cutinBonus = Calculator.AACutinVariableBonus.ContainsKey(cutinKind) ? Calculator.AACutinVariableBonus[cutinKind] : 1.0;
+			double cutinBonus = Calculator.AACutinVariableBonus.ContainsKey(cutinKind) ? AACutinVariableBonus[cutinKind] : 1.0;
 
 			return (int)Math.Floor((adjustedAAValue + adjustedFleetAAValue) * GetAirDefenseCombinedFleetCoefficient(combinedFleetFlag) * cutinBonus / 10);
 		}

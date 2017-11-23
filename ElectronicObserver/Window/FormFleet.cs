@@ -655,11 +655,15 @@ namespace ElectronicObserver.Window
 					int aacutin = Calculator.GetAACutinKind(ship.ShipID, slotmaster);
 					if (aacutin != 0)
 					{
-						sb.AppendFormat("対空: {0}\r\n", Constants.GetAACutinKind(aacutin));
+						sb.AppendFormat("kind{0} 固定{1} 撃墜倍率{2}\r\n",
+                            aacutin, 
+                            Calculator.AACutinFixedBonus.ContainsKey(aacutin) ? Calculator.AACutinFixedBonus[aacutin] : 0, 
+                            Calculator.AACutinVariableBonus.ContainsKey(aacutin) ? Calculator.AACutinVariableBonus[aacutin] : 0
+                            );
 					}
 					double adjustedaa = Calculator.GetAdjustedAAValue(ship);
-					sb.AppendFormat("加重対空: {0} (割合撃墜: {1:p2})\r\n",
-						adjustedaa,
+					sb.AppendFormat("固定: {0} 割合: {1:p2}\r\n",
+						adjustedaa/10,
 						Calculator.GetProportionalAirDefense(adjustedaa)
 						);
 

@@ -685,41 +685,41 @@ namespace ElectronicObserver.Data
 				case NightAttackKind.NormalAttack:
 					return "通常攻撃";
 				case NightAttackKind.DoubleShelling:
-					return "連続射撃";
+					return "連撃";
 				case NightAttackKind.CutinMainTorpedo:
-					return "カットイン(主砲/魚雷)";
+					return "CI(砲雷)";
 				case NightAttackKind.CutinTorpedoTorpedo:
-					return "カットイン(魚雷x2)";
+					return "CI(魚雷x2)";
 				case NightAttackKind.CutinMainSub:
-					return "カットイン(主砲x2/副砲)";
+					return "CI(主副)";
 				case NightAttackKind.CutinMainMain:
-					return "カットイン(主砲x3)";
+					return "CI(主砲x3)";
 				case NightAttackKind.CutinAirAttack:
-					return "空母カットイン";
+					return "空母CI";
 				case NightAttackKind.CutinTorpedoRadar:
-					return "駆逐カットイン(主砲/魚雷/電探)";
+					return "駆逐CI(主/雷/探)";
 				case NightAttackKind.CutinTorpedoPicket:
-					return "駆逐カットイン(魚雷/見張員/電探)";
+					return "駆逐CI(雷/見/探)";
 				case NightAttackKind.Shelling:
 					return "砲撃";
 				case NightAttackKind.AirAttack:
 					return "空撃";
 				case NightAttackKind.DepthCharge:
-					return "爆雷攻撃";
+					return "爆雷";
 				case NightAttackKind.Torpedo:
 					return "雷撃";
 				case NightAttackKind.Rocket:
 					return "ロケット砲撃";
 				case NightAttackKind.LandingDaihatsu:
-					return "揚陸攻撃(大発動艇)";
+					return "揚陸(大発動艇)";
 				case NightAttackKind.LandingTokuDaihatsu:
-					return "揚陸攻撃(特大発動艇)";
+					return "揚陸(特大発動艇)";
 				case NightAttackKind.LandingDaihatsuTank:
-					return "揚陸攻撃(大発戦車)";
+					return "揚陸(大発戦車)";
 				case NightAttackKind.LandingAmphibious:
-					return "揚陸攻撃(内火艇)";
+					return "揚陸(内火艇)";
 				case NightAttackKind.LandingTokuDaihatsuTank:
-					return "揚陸攻撃(特大発戦車)";
+					return "揚陸(特大発戦車)";
 				default:
 					return "不明";
 			}
